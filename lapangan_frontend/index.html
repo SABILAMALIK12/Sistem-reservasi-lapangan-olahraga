@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservasi Lapangan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Reservasi Lapangan Olahraga</h1>
+
+    <article>
+      <h2>Register</h2>
+      <input id="reg-nama" placeholder="Nama">
+      <input id="reg-telepon" placeholder="Telepon">
+      <input id="reg-email" placeholder="Email">
+      <input id="reg-password" type="password" placeholder="Password">
+      <button onclick="register()">Daftar</button>
+      <p id="reg-hasil"></p>
+    </article>
+
+    <article>
+      <h2>Login</h2>
+      <input id="login-email" placeholder="Email">
+      <input id="login-password" type="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p id="login-hasil"></p>
+    </article>
+
+        <article>
+      <h2>Daftar Lapangan</h2>
+      <button onclick="lihatLapangan()">Lihat Semua Lapangan</button>
+      <ul id="lapangan-list"></ul>
+    </article>
+
+    <article>
+      <h2>Tambah Lapangan (khusus admin)</h2>
+      <input id="tambah-nama" placeholder="Nama Lapangan">
+      <input id="tambah-harga" placeholder="Harga per Jam" type="number">
+      <button onclick="tambahLapangan()">Tambah</button>
+      <p id="tambah-hasil"></p>
+    </article>
+
+    <article>
+      <h2>Buat Booking</h2>
+      <input id="booking-lapangan-id" placeholder="ID Lapangan" type="number">
+      <input id="booking-mulai" placeholder="Jadwal Mulai" type="datetime-local">
+      <input id="booking-selesai" placeholder="Jadwal Selesai" type="datetime-local">
+      <button onclick="buatBooking()">Booking</button>
+      <p id="booking-hasil"></p>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
